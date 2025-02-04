@@ -10,7 +10,7 @@ eas build --platform android --profile development
 # In App.js, add "yo" before "Open up App.js"
 eas update --channel development --message "yo" --non-interactive --platform android
 # In Android emulator, no updates in Extensions tab.
-# In expo web console, open update and click on Preview. Will see this error:
+# Since we can't open in Extensions tab, open from expo web console instead. In expo web console, open update and click on Preview. Will see this error:
 ```
 <img width="523" alt="image" src="https://github.com/user-attachments/assets/a300f041-06b3-4711-b4aa-39802b4224f8" />
 

@@ -10,5 +10,6 @@ eas build --platform android --profile development
 eas update --channel development --message "yo 51" --non-interactive --platform android
 # Take "yo 51" out of App.js
 npx expo start
-# In Android emulator, tap on Extensions tab and login. Select "yo 51" update.
+# In Android emulator, tap on Extensions tab and login. Select "yo 51" update. See error:
 ```
+<img width="516" alt="Image" src="https://github.com/user-attachments/assets/0e0f3c36-1f91-4b94-93ab-6d7bb94b2c0a" />

@@ -6,7 +6,8 @@ npx supabase start
 ```
 In `lib/supabase.ts`, update `supabaseAnonKey`.
 
-How this repo was created:
+# How this repo was created:
+## Supabase user management
 ```
 # https://supabase.com/docs/guides/getting-started/tutorials/with-expo-react-native
 npx create-expo-app -t expo-template-blank-typescript@sdk-51 expo-user-management
@@ -16,27 +17,17 @@ npx expo install @supabase/supabase-js @react-native-async-storage/async-storage
 Populate `lib/supabase.ts`, `components/Auth.tsx`, `App.tsx` as described at
 https://supabase.com/docs/guides/getting-started/tutorials/with-expo-react-native
 Copy `index.js` from [here](https://github.com/supabase/supabase/blob/master/examples/user-management/expo-user-management/index.js)
+Copy `components/Accounts.tsx` from this repo.
 
-# Put into components/Account.tsx:
+## Expo router
+Install expo router (manual installation): https://docs.expo.dev/router/installation/#manual-installation
+Put in `app/index.js`:
 ```
-import { useState, useEffect } from 'react'
-import { supabase } from '../lib/supabase'
-import { StyleSheet, View, Alert,Text } from 'react-native'
-import { Button, Input } from '@rneui/themed'
-import { Session } from '@supabase/supabase-js'
+import { Text } from 'react-native';
 
-export default function Account({ session }: { session: Session }) {
-  return (
-    <View style={styles.container}>
-      <Text>{session?.user?.email} logged in</Text>
-    </View>
-  )
+import App from '../App';
+
+export default function Page() {
+  return App();
 }
-
-const styles = StyleSheet.create({
-  container: {
-    marginTop: 400,
-    padding: 12,
-  },
-})
 ```

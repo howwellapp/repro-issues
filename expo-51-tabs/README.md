@@ -31,3 +31,6 @@ export default function Page() {
   return App();
 }
 ```
+
+## Expo router tabs
+Set up tabs from https://docs.expo.dev/router/advanced/tabs/
